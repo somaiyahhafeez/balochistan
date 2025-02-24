@@ -59,6 +59,17 @@
         height: auto; /* Maintains aspect ratio */
        display: block;
        }
+        .responsive-container {
+        text-align: center;
+        max-width: 100%; /* Ensures it doesn't exceed the viewport width */
+        height: auto; /* Maintains aspect ratio */
+     }
+
+   .responsive-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+   }
+
 
         figcaption {
         font-size: 0.9em; /* Slightly smaller text */
@@ -151,10 +162,10 @@
 
          <p>Balochistan has been embroiled in an insurgency for more than two decades. Separatist groups like the Baloch Liberation Army (BLA) and the Balochistan Liberation Front (BLF) are fighting the Pakistani state for greater autonomy over their resource-rich region.</p>
          <p>In the last couple of years there has also been a surge in insurgent attacks in Balochistan.</p>
-         <figure>
-            <img src="images/balochistan_insurgency.jpg"
-                 alt ="a chart showing trend in insurgency in Balochistan">
-        </figure>
+         <figure class="responsive-container">
+         <img src="images/balochistan_insurgency_chart.png" alt="Chart showing trend in insurgency in Balochistan">  
+         </figure>
+
         <p>Data from Armed Conflict Location & Event Data (ACLD), a non-profit organization specializing in conflict data collection, shows that 732 acts of political violence by Baloch separatists groups were carried out in 2024, a dramatic rise from 214 in 2023. February, the month when Pakistanis hit the polls amid a charged-up political atmosphere, witnessed the highest number of attacks followed by August, Pakistan’s independence month. </p> 
 
          <p>Baloch people have long complained of rights abuses, political and economic marginalization, despite the region’s vast mineral wealth. This ongoing insurgency is not the first—there have been four previous rebellions. But in the latest iteration, which began in the early 2000s, Pakistani security services have been accused of widespread enforced disappearances and extrajudicial killings of Baloch men.</p>
