@@ -21,6 +21,7 @@ You can read my piece here: [somaiyahhafeez.github.io/balochistan](https://somai
 ## Data Analysis Process
 - Data was cleaned and processed using Python and pandas.
 - Visualizations were created using datawrapper.
+- Chart on insurgent attacks made using ACLED data.
 
 ## Skills & Growth
 - Improved data visualization and mapping skills.
