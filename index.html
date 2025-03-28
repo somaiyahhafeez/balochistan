@@ -118,14 +118,12 @@
 .map-section h2 {
     font-size: 1.2em;
     font-weight: bold;
-    margin-bottom: 0.5em;
 }
 
 .map-section p {
     font-size: 0.8em;
     color: #555;
     max-width: 900px;
-    margin: 0 auto 2em;
 }
 
 .map-container {
@@ -152,6 +150,24 @@ figcaption {
     color: #666;
     text-align: left;
 }
+                @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+
+            .map-container {
+                flex-direction: column;
+            }
+
+            .map-container iframe {
+                width: 100%;
+            }
+        }
 
     </style>
 </head>
