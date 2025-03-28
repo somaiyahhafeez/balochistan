@@ -110,7 +110,7 @@
             text-align: center;
         }
 
-        .map-container {
+       .map-container {
             display: flex;
             justify-content: space-between;
             gap: 1em;
@@ -119,7 +119,9 @@
         }
 
         .map-container iframe {
-            width: 48%; /* Slightly less than 50% to account for gap */
+            width: 45%; 
+            max-height: 500px; 
+            object-fit: contain;
             margin: 0;
             padding: 0;
         }
@@ -131,6 +133,7 @@
 
             .map-container iframe {
                 width: 100%;
+                max-height: none;
             }
         }
         
