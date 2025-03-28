@@ -110,38 +110,54 @@
             text-align: center;
         }
 
-       .map-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 1em;
-            margin-bottom: 1.2em;
-        }
+       .map-section {
+    text-align: center;
+    margin: 2em 0;
+}
 
-    .map-container iframe {
-      width: 100%;
-      max-width: 1200px;  
-      height: auto;
-       }
+.map-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
 
+.map-section p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 2em;
+}
 
-        @media (max-width: 640px) {
-            body {
-                font-size: 18px;
-            }
+.map-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    flex-wrap: wrap; 
+}
 
-            .content {
-                padding-left: 0.5em;
-                padding-right: 0.5em;
-            }
+.map {
+    width: 100%;
+    max-width: 48%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; 
+}
 
-            .map-container {
-                flex-direction: column;
-            }
+.map iframe {
+    width: 100%;
+    height: 600px; 
+    border: none;
+}
 
-            .map-container iframe {
-                width: 100%;
-            }
-        }
+figcaption {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    padding: 0.5em;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
     </style>
 </head>
 
@@ -191,27 +207,32 @@
          <p>Balach Mola Bakhsh, a 24-year-old student from Turbat, was taken away by the counter-terrorism department on October 29, 2023. His family was unaware of his whereabouts for almost a month before authorities claimed he had been caught in possession of explosives and presented in court. However, a day before his bail plea was scheduled, Bakhsh was one of four men found dead. Police labeled them as “terrorists” from a “proscribed group” killed in a shootout.</p>
          <p>His killing ignited widespread protests. Protests started in Turbat as his family demanded a police report to be registered against the Counter Terrorism Department officials involved in the case however due to lack of action the protesters decide to march to the capital of Balochistan, Quetta.</p>
          <p> After staging a sit-in in Quetta during which negotiations with the adminstration didn't result in any negotiations, rights group Baloch Yakhjeti Committee (Baloch Solidarity Committee), led by Mahrang Baloch, decided to march to the federal capital, Islamabad. Along the way they stopped at several remote towns and villages. When they reached Islamabad, they were faced with a crackdown but managed to camp outside the National Press Club for almost a month, demanding an end to enforced disappearances and extrajudicial killings in Balochistan. </p>
-         <div class="map-container">
-            <iframe title="Tracing the Baloch Long March" 
-            aria-label="Locator map" 
-            id="datawrapper-chart-GOcsL" 
-            src="https://datawrapper.dwcdn.net/GOcsL/4/" 
-            scrolling="no" 
-            frameborder="0" 
-            style="width: 100%; border: none;"  
-            height="600" 
-            data-external="1"></iframe>
+         <div class="map-section">
+    <h2>Tracing the Baloch Long March</h2>
+    <p>Protesters marched from Turbat to Quetta, and then continued their journey to the capital, Islamabad, passing through remote villages and towns.</p>
 
-            <iframe title="Baloch protesters continued their march from Quetta to the capital, Islamabad" 
-            aria-label="Locator map" 
-            id="datawrapper-chart-3H3ZK" 
-            src="https://datawrapper.dwcdn.net/3H3ZK/2/" 
-            scrolling="no" 
-            frameborder="0" 
-            style="width: 100%; border: none;"  
-            height="600" 
-            data-external="1"></iframe>
-         </div>
+     <div class="map-container">
+        <div class="map">
+            <iframe title="Turbat to Quetta route" 
+                    src="https://datawrapper.dwcdn.net/GOcsL/4/" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    data-external="1"></iframe>
+            <figcaption>Route from Turbat to Quetta.</figcaption>
+        </div>
+
+        <div class="map">
+            <iframe title="Quetta to Islamabad route" 
+                    src="https://datawrapper.dwcdn.net/3H3ZK/2/" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    data-external="1">
+            </iframe>
+        <figcaption>Route from Quetta to Islamabad.</figcaption>
+        </div>
+        </div>
+        </div>
+
          <p>“BYC’s decision to march first to Quetta [Balochistan’s capital] and then to Islamabad through villages, towns, and cities resulted in mass mobilization, visible in the protests across Balochistan, Karachi, Tunsa, and Dera Ghazi Khan. The numbers and locations of these protests are unprecedented,” said Zafar Musyani, a Baloch researcher.</p>
          <h2>Counting the Disappeared </h2>
          <p>What further aggravates the crisis of enforced disappearances is the absence of a complete dataset. Baloch human rights organizations estimate the number of disappeared to be over 5,000, while the Pakistani government continues to downplay the issue.</p>     
