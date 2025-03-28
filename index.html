@@ -1,42 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Lesser Known War: Balochistan's Struggle For Its Disappeared</title>
 
-    <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
     <style>
         body {
             margin: 0;
             font-size: 20px;
             font-family: 'Avenir', sans-serif !important;
-            text-rendering: optimizeLegibility;
             line-height: 1.6;
+            color: #333;
         }
 
-        .banner {
-            background: url('images/baloch-missing.png');
-            background-size: cover;
-            height: 800px;
-            width: 100%;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4em 1.5em;
+        }
+
+        .header-text {
+            max-width: 60%;
+        }
+
+        h1 {
+            font-size: 3.2em;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 0.3em;
+        }
+
+        .byline {
+            font-size: 1.2em;
+            color: #800000; /* Red byline */
+            margin-bottom: 1em;
+        }
+
+        .header-image img {
+            max-width: 400px;
+            height: auto;
         }
 
         .content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1.5em;
-        }
-
-        .header {
-            padding: 3em 0;
-            text-align: center;
-        }
-
-        a {
-            color: #000000;
         }
 
         .footer {
@@ -46,6 +60,28 @@
             margin-top: 4em;
             padding: 4em 0;
         }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-text {
+                max-width: 100%;
+                margin-bottom: 2em;
+            }
+
+            .header-image img {
+                max-width: 100%;
+            }
+        }
+
+
+        a {
+            color: #000000;
+        }
+
 
         figure {
             text-align: center;
@@ -178,16 +214,15 @@
     </style>
 </head>
 <body>
-    <div class="banner"></div>
-    <div class="content">
-         <div class="header">
-            <h1> The Lesser Known War: Balochistan's Struggle For Its Disappeared</h1> 
-            <time datetime="2025-02-24" itemprop="datePublished">24 Feb. 2025</time>
-            <p class="subhead">Amid decades of enforced disappearances, Baloch families march for justice—refusing to be silenced.</p>
-         </div>
-         <div class="byline">
-            <p>By <a href="https://somaiyahhafeez.github.io/">Somaiyah Hafeez</a></p>
-         </div>
+   <div class="container">
+    <div class="header-text">
+        <h1>The Lesser Known War: Balochistan's Struggle For Its Disappeared</h1>
+        <p class="byline">By Somaiyah Hafeez</p>
+    </div>
+    <div class="header-image">
+        <img src="images/baloch-missing.png" alt="Baloch woman holding a photo of a missing person">
+    </div>
+</div>
          <p>Mariam, a 11-year-old girl from Mach, a town in Balochistan, spent more than a month in a protest camp in December 2023. She made the journey from Mach to the capital Islamabad with her aunt and hundreds of other Baloch protestors.</p>
          <p>Her tiny hands carried a picture: a bearded man holding a toddler in one hand, his other hand raised in what could have been a goodbye. Could Akhtar have ever envisioned that the toddler in his arms would one day be sleeping outside in the cold of Islamabad, where the temperature dropped to 4 degrees, searching for him? Was this farewell meant for her?</p>
          <p>Mariam is not alone. Thousands of Baloch families have endured the same fate for decades, as Pakistan’s security forces continue their brutal campaign of enforced disappearances. Her father is one of the thousands of missing persons from Balochistan—Pakistan’s largest province.
