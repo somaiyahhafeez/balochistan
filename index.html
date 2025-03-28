@@ -25,7 +25,7 @@
         }
 
         .content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 1.5em;
         }
@@ -110,41 +110,28 @@
             text-align: center;
         }
 
-.map-container {
+        .map-container {
+            width: 100%;
             display: flex;
             justify-content: center;
             gap: 1em;
             margin-bottom: 1.2em;
-            width: 100%;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .map-container iframe {
             width: calc(50% - 0.5em);
-            margin: 0;
-            padding: 0;
         }
 
         @media (max-width: 640px) {
-            body {
-                font-size: 18px;
-            }
-
-            .content {
-                padding-left: 0.5em;
-                padding-right: 0.5em;
-            }
-
             .map-container {
                 flex-direction: column;
-                gap: 1.2em;
             }
 
             .map-container iframe {
                 width: 100%;
             }
+        }
+        
     </style>
 </head>
 
