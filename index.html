@@ -111,15 +111,17 @@
         }
 
         .map-container {
-            width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             gap: 1em;
             margin-bottom: 1.2em;
+            width: 100%;
         }
 
         .map-container iframe {
-            width: calc(50% - 0.5em);
+            width: 48%; /* Slightly less than 50% to account for gap */
+            margin: 0;
+            padding: 0;
         }
 
         @media (max-width: 640px) {
