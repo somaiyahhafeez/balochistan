@@ -7,147 +7,299 @@
     <title>The Lesser Known War: Balochistan's Struggle For Its Disappeared</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
-    <style>
-            body {
+ <style>
+        :root {
+            --primary-color: #1a5a96;
+            --secondary-color: #e63946;
+            --text-color: #333;
+            --light-text: #666;
+            --background: #f8f9fa;
+            --light-background: #fff;
+            --dark-background: #222;
+            --border-color: #eee;
+            --content-max-width: 800px;
+            --content-padding: clamp(1rem, 5vw, 2rem);
+            --heading-line-height: 1.2;
+            --body-line-height: 1.8;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             font-size: 18px;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.8;
-        }
-            .container {
-            display: flex;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 4em 1.5em;
-            gap: 2em; 
-            align-items: center;
-            justify-content: space-between; 
+            background-color: var(--light-background);
+            color: var(--text-color);
+            line-height: var(--body-line-height);
         }
 
-
-        h1, h2 {
-            color: #222;
-        }
-        .byline {
-            font-size: 1.1em;
-            color: #666;
-        }
-        .header-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 2em 0;
-            background: #222;
-            color: #fff;
-            margin-top: 2em;
-        }
-        .footer a {
-            color: #f5f5f5;
-        }
-        
-
-
-        .header-text {
-            max-width: 55%;
-        }
-
-        h1 {
-            font-size: 3.5em;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 0.3em;
-        }
-
-        .byline {
-            font-size: 1.2em;
-            color: #000000;
-            margin-bottom: 1em;
-        }
-
-        .header-image img {
+        img {
             max-width: 100%;
             height: auto;
-            object-fit: cover;
-        }
-
-        .content {
-            max-width: 900px;
-            margin: auto;
-            padding: 2em 1.5em;
-        }
-
-
-        .map-section {
-            text-align: left;
-            margin: 2em 0;
-        }
-
-        .map-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 1em;
-            flex-wrap: wrap;
-        }
-
-        .map {
-            width: 100%;
-            max-width: 48%;
-            overflow: hidden;
-        }
-
-        .map iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .header-text, .header-image {
-                max-width: 100%;
-            }
-
-            h1 {
-                font-size: 2.5em;
-            }
-
-            .map-container {
-                flex-direction: column;
-            }
-
-            .map {
-                max-width: 100%;
-            }
-
-            .map iframe {
-                height: 400px;
-            }
+            display: block;
         }
 
         a {
-            color: #000000;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-speed) ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .container {
+            max-width: var(--content-max-width);
+            margin: 0 auto;
+            padding: 0 var(--content-padding);
+        }
+
+        .site-header {
+            background-color: var(--light-background);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            z-index: 10;
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .banner {
+            position: relative;
+            background: url('images/baloch-missing.png') no-repeat center center;
+            background-size: cover;
+            height: 500px;
+            width: 100%;
+        }
+
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+        }
+
+        .banner-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            color: white;
+            padding: 2rem var(--content-padding);
+            max-width: var(--content-max-width);
+            margin: 0 auto;
+        }
+
+        .banner-content h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: var(--heading-line-height);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .banner-content .subhead {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            max-width: 90%;
+        }
+
+        .main-content {
+            background-color: var(--light-background);
+            padding: 0;
+            margin-bottom: 3rem;
+        }
+
+        .content {
+            padding: 2.5rem var(--content-padding);
+        }
+
+        .byline {
+            font-size: 1rem;
+            color: var(--light-text);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .byline a {
+            font-weight: 600;
+        }
+
+        .main-content h2 {
+            font-size: 1.75rem;
+            margin: 2rem 0 1rem;
+            color: var(--text-color);
+        }
+
+        .main-content p {
+            margin-bottom: 1.5rem;
+        }
+
+
+        .iframe-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            max-width: 100%;
+            border: none;
+        }
+
+        .visualization-caption {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            padding: 1rem var(--content-padding);
+            border-top: 1px solid var(--border-color);
+            background-color: #f0f6fb;
+        }
+
+        .highlight-box {
+            background-color: #f0f6fb;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+
+
+        blockquote cite {
+            display: block;
+            margin-top: 0.75rem;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+
+
+        .footer {
+            background: #f0f0f0; 
+            color: black;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #a8dadc;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .banner {
+                height: 350px;
+            }
+
+            .main-content {
+                padding: 0;
+            }
+
+            .content {
+                padding: 1.5rem var(--content-padding);
+            }
+
+            .visualization-container {
+                margin: 2rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner {
+                height: 250px;
+            }
+
+            .read-more-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
         }
     </style>
 </head>
+
 <body>
-   <div class="container">
-    <div class="header-text">
-        <h1>The Lesser Known War: Balochistan's Struggle For Its Disappeared</h1>
-        <p class="byline">By <a href="https://somaiyahhafeez.github.io/">Somaiyah Hafeez</a></p>
-    </div>
-    <div class="header-image">
-        <img src="images/baloch-missing.png" alt="Baloch woman holding a photo of a missing person">
-    </div>
-</div>
+
+
+    <main id="main-content">
+        <div class="banner" role="banner">
+            <div class="banner-content">
+            <h1>The Lesser Known War: Balochistan's Struggle For Its Disappeared</h1>                
+            </div>
+        </div>
+
+        <article class="main-content container">
+            <div class="content">
+                <div class="byline">
+                    <p>By <a href="https://somaiyahhafeez.github.io">Somaiyah Hafeez</a> | Published February 23, 2025</p>
+                </div>
+
     <div class="content">
         <p> Mariam, a 11-year-old girl from Mach, a town in Balochistan, whose father was forcibly disappeared, spent more than a month in a protest camp in December 2023. She made the journey from Mach to the federal capital,  Islamabad,  with her aunt and hundreds of other Baloch protestors.</p>
         <p> Her tiny hands carried a picture: a bearded man holding a toddler in one hand, his other hand raised in what could have been a goodbye. Could Akhtar have ever envisioned that the toddler in his arms would one day be sleeping outside in the cold of Islamabad, where the temperature dropped to 4 degrees, searching for him? Was this farewell meant for her?</p>
